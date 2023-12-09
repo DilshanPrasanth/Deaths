@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
+
+# Get the current working directory
+current_directory = os.getcwd()
+print(f"Current Working Directory: {current_directory}")
 
 # Load the dataset
 file_path = r'C:\Users\Saman\Desktop\phyton_ws\Deaths Worldwide\cause_of_deaths.csv'
@@ -49,10 +54,3 @@ fig_top10_pie = px.pie(top10_pie_chart_data,
                        hole=0.3)  # Adjust the hole size for better readability
 st.plotly_chart(fig_top10_pie)
 
-import os
-
-# Get the current working directory
-current_directory = os.getcwd()
-
-# Print the current working directory
-print(f"Current Working Directory: {current_directory}")
